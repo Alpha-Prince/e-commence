@@ -1,8 +1,9 @@
 import React from 'react'
 import './Footer.css'
 import logo from '../../assets/logo.png'
-import pintrest from '../../Assets/pinterest-icon.jpg'  
-import whatsapp from '../../Assets/whatsapp-icon.png'
+import instagram from '../../assets/instagram.jpg'
+import pintrest from '../../assets/pinterest-icon.jpg'  
+import whatsapp from '../../assets/whatsapp-icon.png'
 const Footer = () => {
   return (
     <div className='footer'>
