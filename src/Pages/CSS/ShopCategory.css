@@ -1,0 +1,86 @@
+.shop-category{
+    display:block;
+    margin: 30px auto;
+    width: 82%;
+}
+.banner{
+flex:1;
+display: flex;
+align-items: center;
+justify-content:space-around;
+padding:20px;
+gap: 10px;
+background: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.banner-left{
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.banner-left h1{
+    font-size: 45px;
+    font-weight: 700;
+    color: #f38841;
+    
+}
+.banner-left p{
+    font-size: 26px;
+    color: #3d3d3d;
+
+}
+.banner-left span{
+    font-weight: 700;
+    color: #f38841;
+
+}
+.banner-left button{
+    font-size: 18px;
+    padding: 15px 40px;
+    background: #f58134;
+    color: #fff;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+}
+.banner-right{
+width: 40px;
+display: flex;
+align-items: center;
+justify-content:center;
+}
+
+.shopcategory-indexSort{
+    display:flex;
+    margin:0px 170px;
+    justify-content: space-between;
+    align-items: center;
+}
+.shopcategory-sort{
+    padding: 10px 20px;
+    border-radius: 40px;
+    border: 1px solid #888;
+}
+.shopcategory-indexSort p span{
+  font-weight: 600;
+}
+.shopcategory-product{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin: 20px;
+    row-gap: 80px;
+}
+
+.shopcategory-loadmore{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 150px auto;
+    width: 233px;
+    height: 69;
+    border-radius: 75px;
+    background: #ededed;
+    color: #787878;
+    font-size: 18px;
+    font-weight: 500;
+}
