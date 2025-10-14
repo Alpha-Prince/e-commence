@@ -1,23 +1,23 @@
 .productdisplay{
-    display:flex;
-    margin:0px 70px;
+    display: flex;
+    margin: 0px 70px;
+    gap: 50px;
 }
 .productdisplay-left{
-    display:flex;
-    gap:5px;
+    display: flex;
+    gap: 5px;
 }
-.productdisplay-img-list{
-    display:flex;
-    flex-direction:column;
-    gap:20px;
+.productdisplay-img-left{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
 .productdisplay-img-left img{
-  height:163px;
-  
+  height: 163px;
 }
 .productdisplay-main-img{
    width: 500px;
-   height:665px;
+   height: 665px;
 }
 
 .productdisplay-right{
@@ -27,60 +27,66 @@
     text-align: left;
 }
 .productdisplay-right h1{
-    color:#3d3d3d;
-    font-size:40px;
+    color: #3d3d3d;
+    font-size: 40px;
     font-weight: 700;
 }
-.productdisplay-right-stars{
+.productdisplay-right-star{
   display: flex;
   align-items: center;
   margin-top: 13px;
   color: #1c1c1c;
-  font-size:16px;
+    font-size: 16px;
 }
 .productdisplay-right-prices{
     display: flex;
     margin: 40px 0px;
-    gap:30px;
+    gap: 30px;
     font-size: 24px;
-    font-weight:700 ;
+    font-weight: 700;
 }
 .productdisplay-right-price-old{
-    color:#818181;
+    color: #818181;
     text-decoration: line-through;
 }
 .productdisplay-right-price-new{
-    color:#ff4141;
+    color: #ff4141;
+}
+.productdisplay-right-description{
+    margin-bottom: 20px;
+    color: #656565;
+    font-size: 16px;
+    line-height: 1.5;
 }
 .productdisplay-right-size h1{
     margin-top: 30px;
-    color:#656565;
+    color: #656565;
     font-size: 20px;
     font-weight: 600;
 }
 .productdisplay-right-sizes{
     display: flex;
     margin: 20px 0px;
-    gap:20px;
+    gap: 20px;
 }
 .productdisplay-right-sizes div{
-  padding:15px 10px;
+  padding: 15px 10px;
   background: #fbfbfb;
   border: 1px solid #ebebeb;
   border-radius: 2px;
-  cursor: pointer;
+    cursor: pointer;
 } 
 
 .productdisplay-right button{
     padding: 20px 40px;
-    width:200px;
+    width: 200px;
     font-weight: 600;
     font-size: 16px;
-    color:white;
+    color: white;
     background: #ff4141;
     margin-bottom: 30px;
-    border:none;
-    outline:none;
+    border: none;
+    outline: none;
     cursor: pointer;
 }
 .productdisplay-right-category{
@@ -88,6 +94,98 @@
     font-weight: 600;
 }
 .productdisplay-right-category span{
+    color: #8a8a8a;
+}
 
-color: #8a8a8a;
+@media (max-width: 1024px) {
+    .productdisplay {
+        margin: 0px 40px;
+        gap: 30px;
+    }
+    
+    .productdisplay-right {
+        margin: 0px 40px;
+    }
+    
+    .productdisplay-main-img {
+        width: 400px;
+        height: 530px;
+    }
+}
+
+@media (max-width: 768px) {
+    .productdisplay {
+        flex-direction: column;
+        margin: 0px 20px;
+        gap: 20px;
+        align-items: center;
+    }
+    
+    .productdisplay-left {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .productdisplay-img-left {
+        display: none;
+    }
+    
+    .productdisplay-img {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+    
+    .productdisplay-main-img {
+        width: 100%;
+        max-width: 300px;
+        height: auto;
+    }
+    
+    .productdisplay-right {
+        margin: 0;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .productdisplay-right-sizes {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+    
+    .productdisplay-right button {
+        width: 100%;
+        max-width: 250px;
+        margin: 0 auto 20px auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .productdisplay {
+        margin: 0px 15px;
+    }
+    
+    .productdisplay-main-img {
+        max-width: 250px;
+    }
+    
+    .productdisplay-right h1 {
+        font-size: 28px;
+    }
+    
+    .productdisplay-right-prices {
+        font-size: 20px;
+        margin: 25px 0px;
+    }
+    
+    .productdisplay-right-sizes {
+        gap: 10px;
+    }
+    
+    .productdisplay-right-sizes div {
+        padding: 12px 8px;
+        font-size: 14px;
+    }
 }

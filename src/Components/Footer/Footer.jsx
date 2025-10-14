@@ -15,8 +15,8 @@ const Footer = () => {
             <li>Company</li>
             <li>Products</li>
             <li>Offices</li>
-            <li>About</li>
-            <li>Contact</li>
+            <a href="https://sire-services.vercel.app" >About</a>
+            <a href="https://sire-services.vercel.app">Contact</a>
         </ul>
         <div className="footer-social-icon">
             <div className="footer-icon-container"> 

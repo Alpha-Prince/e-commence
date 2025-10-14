@@ -1,11 +1,11 @@
 .offers{
-    width:70%;
-    height:60vh;
-    display:flex;
-    margin:30px  auto;
-    padding: 0 100px;
-    margin-bottom: 220px;
-    background:  linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
+    width: clamp(85%, 70%, 90%);
+    height: clamp(40vh, 60vh, 70vh);
+    display: flex;
+    margin: clamp(20px, 3vw, 30px) auto;
+    padding: 0 clamp(20px, 8vw, 100px);
+    margin-bottom: clamp(120px, 22vh, 220px);
+    background: linear-gradient(180deg, #fde1ff 0%, #e1ffea22 60%);
 }
 .offers-left{
     flex: 1;
@@ -14,26 +14,87 @@
     justify-content: center;
 }
 .offers-left h1{
-    color:#171717;
-    font-size: 22px;
+    color: #171717;
+    font-size: clamp(18px, 2.5vw, 22px);
     font-weight: 600;
 }
 .offers-left button{
-    width: 282px;
-    height: 70px;
+    width: clamp(200px, 25vw, 282px);
+    height: clamp(50px, 8vw, 70px);
     border-radius: 35px;
     background: #ff4141;
     border: none;
     color: white;
-    font-size: 22px;
+    font-size: clamp(16px, 2.5vw, 22px);
     font-weight: 500;
-    margin-top: 30px;
+    margin-top: clamp(20px, 3vw, 30px);
     cursor: pointer;
 }
 .offers-right{
     flex: 1;
     display: flex;
     align-items: center;
-    justify-content:flex-end;
-    padding-top: 50px;
+    justify-content: flex-end;
+    padding-top: clamp(30px, 5vw, 50px);
+}
+
+.offers-right img{
+    width: clamp(200px, 35vw, 320px);
+    max-width: 100%;
+    height: auto;
+}
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .offers {
+        width: clamp(90%, 80%, 95%);
+        padding: 0 clamp(30px, 6vw, 60px);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .offers {
+        flex-direction: column;
+        height: auto;
+        padding: clamp(30px, 5vw, 40px);
+        gap: clamp(20px, 4vw, 30px);
+    }
+    
+    .offers-left {
+        align-items: center;
+        text-align: center;
+    }
+    
+    .offers-right {
+        justify-content: center;
+        padding-top: 0;
+    }
+    
+    .offers-right img {
+        width: clamp(180px, 50vw, 250px);
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .offers {
+        width: 95%;
+        padding: clamp(20px, 4vw, 30px);
+        margin-bottom: clamp(80px, 15vh, 120px);
+    }
+    
+    .offers-left h1 {
+        font-size: clamp(16px, 2vw, 20px);
+    }
+    
+    .offers-left button {
+        width: clamp(180px, 70vw, 220px);
+        height: clamp(45px, 7vw, 60px);
+        font-size: clamp(14px, 2vw, 18px);
+    }
+    
+    .offers-right img {
+        width: clamp(150px, 60vw, 200px);
+    }
 }

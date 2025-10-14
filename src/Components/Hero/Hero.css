@@ -12,97 +12,80 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 20px;
+    gap: clamp(15px, 3vw, 20px);
     text-align: left;
-    padding-left: 50px;
+    padding-left: clamp(20px, 6vw, 50px);
     line-height: 1.1;
        
 }
 .hero-left h2{
     color:#090909;
-    font-size:26px;
+    font-size: clamp(20px, 3.5vw, 26px);
     font-weight:600;
     }
 .hero-left p{
     color:#171717;
-    font-size:70px;
+    font-size: clamp(30px, 9vw, 70px);
     font-weight:700;
     }
 .hand-hand-icon{
   display:flex;
   align-items:center;
-  gap:20px;
+  gap: clamp(10px, 2.5vw, 20px);
 }
 .hand-hand-icon img{
-   width: 105px;
+   width: clamp(50px, 13vw, 105px);
 }
 .hero-latest-btn{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 15px;
-    width: 310px;
-    height: 70px;
+    gap: clamp(0px, 2vw, 15px);
+    width: clamp(180px, 40vw, 310px);
+    height: clamp(50px, 8vw, 70px);
     border-radius: 75px;
-    margin-top: 30px;
+    margin-top: clamp(0px, 4vw, 30px);
     background: #ff4141;
     color: white;
-    font-size: 22px;
+    font-size: clamp(15px, 3vw, 22px);
     font-weight: 500;
+}
+
+.hero-right img{
+    width: clamp(300px, 50vw, 500px);
+    max-width: 100%;
+    height: auto;
 }
 
 @media (max-width:750px){
 .hero{
-height:80vh;
-justify-content: space-around;
-
+    height: clamp(70vh, 90vh, 80vh);
+    justify-content: space-around;
 }
 
 .hero-left{
-    flex:1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 18px;
-    text-align: left;
+    gap: clamp(12px, 2.5vw, 18px);
     padding-left: 0px;
-    line-height: 1;
-       
 }
 .hero-left h2{
-    color:#090909;
-    font-size:20px;
-    font-weight:600;
-    }
+    font-size: clamp(18px, 3vw, 20px);
+}
 .hero-left p{
-    color:#171717;
-    font-size:30px;
-    font-weight:700;
-    }
+    font-size: clamp(25px, 5vw, 30px);
+}
 .hand-hand-icon{
-  display:flex;
-  align-items:center;
-  gap:10px;
+    gap: clamp(8px, 1.5vw, 10px);
 }
 .hand-hand-icon img{
-   width: 50px;
+    width: clamp(40px, 7vw, 50px);
 }
 .hero-latest-btn{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0px;
-    width: 180px;
-    height: 50px;
-    border-radius: 75px;
+    width: clamp(160px, 25vw, 180px);
+    height: clamp(45px, 7vw, 50px);
     margin-top: 0px;
-    background: #ff4141;
-    color: white;
-    font-size: 15px;
-    font-weight: 500;
+    font-size: clamp(14px, 2.5vw, 15px);
 }
 .hero-right img{
-    width: 300px;
+    width: clamp(250px, 40vw, 300px);
 }
-
 }

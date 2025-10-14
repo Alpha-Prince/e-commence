@@ -1,37 +1,41 @@
 .footer{
-    display:flex;
+    display: flex;
     flex-direction: column;
-    align-items:center;
-    justify-content:space-between;
-    gap:50;
-    
+    align-items: center;
+    justify-content: space-between;
+    gap: clamp(30px, 6vw, 50px);
 }
 .footer-logo{
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: clamp(15px, 2.5vw, 20px);
 }
 .footer-logo img{
-      width: 60px;
+      width: clamp(40px, 8vw, 60px);
 }
 .footer-logo p{
-    color:#383838;
-    font-size: 40px;
+    color: #383838;
+    font-size: clamp(25px, 5vw, 40px);
     font-weight: 600;
 }
 .footer-links{
     display: flex;
     list-style: none;
-    gap: 50px;
+    gap: clamp(25px, 6vw, 50px);
     color: #252525;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
 }
 .footer-links li{
+   text-decoration: none;
+    cursor: pointer;
+}
+.footer-links li a{
+   text-decoration: none;
     cursor: pointer;
 }
 .footer-social-icon{
     display: flex;
-    padding-bottom: 6px;
+    padding-bottom: clamp(4px, 0.8vw, 6px);
     background: #fbfbfb;
     border: 1px solid #ebebeb;
 }
@@ -39,19 +43,73 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 30px;
+    gap: clamp(20px, 4vw, 30px);
     width: 100%;
-    margin:30px  20px;
+    margin: clamp(20px, 3vw, 30px) clamp(15px, 2.5vw, 20px);
     color: #1a1a1a;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
 }
 .footer-icon-container img{
-    width:30px;
+    width: clamp(20px, 4vw, 30px);
 }
-.footer-copuyright hr{
+.footer-copyright hr{
     width: 80%;
     border-radius: 10px;
     border: none;
-    height: 3px;
+    height: clamp(2px, 0.5vw, 3px);
     background: #c7c7c7;
+}
+
+
+/* Tablet Styles */
+@media (max-width: 1024px) {
+    .footer-links {
+        gap: clamp(20px, 4vw, 35px);
+    }
+    
+    .footer-icon-container {
+        gap: clamp(15px, 3vw, 25px);
+    }
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: clamp(15px, 3vw, 25px);
+    }
+    
+    .footer-icon-container {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: clamp(15px, 3vw, 25px);
+    }
+    
+    .footer-social-icon {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .footer-links {
+        flex-direction: column;
+        gap: clamp(12px, 2vw, 20px);
+        text-align: center;
+    }
+    
+    .footer-icon-container {
+        flex-direction: column;
+        gap: clamp(12px, 2vw, 20px);
+    }
+    
+    .footer-logo p {
+        font-size: clamp(20px, 4vw, 30px);
+    }
+    
+    .footer-logo img {
+        width: clamp(30px, 6vw, 45px);
+    }
 }

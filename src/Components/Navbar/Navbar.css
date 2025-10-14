@@ -1,7 +1,9 @@
+
+
 .navbar{
     display: flex;
     justify-content: space-around;
-    padding: 16px;
+    padding: clamp(8px, 3vw, 16px);
     box-shadow: 0 1px 3px -2px black;
     transition:0.5s;
     position: relative;
@@ -10,15 +12,15 @@
     display: flex;
     align-items: center;
     justify-content:center;
-    gap: 10px;
+    gap: clamp(6px, 2vw, 10px);
 }
 
 .navbar-logo img{
-    width: 60px;
+    width: clamp(35px, 8vw, 60px);
 }
 
 .navbar-logo p{
-    font-size: 35px;
+    font-size: clamp(22px, 5vw, 35px);
     color: #171717;
     font-weight: 600;
 }
@@ -26,9 +28,9 @@
     display: flex;
     align-items: center;
     list-style: none;
-    gap: 50px;
+    gap: clamp(25px, 6vw, 50px);
     color:rgb(98, 98, 98);
-    font-size: 20px;
+    font-size: clamp(16px, 3vw, 20px);
     font-weight: 500;
 }
 .nav-menu li{
@@ -42,57 +44,55 @@
 .nav-menu hr{
     border: none;
     width: 80%;
-    height: 3px;
+    height: clamp(2px, 0.5vw, 3px);
     border-radius: 10px;
     background: #FF4141;
 }
 .nav-login-cart{
     display: flex;
     align-items: center;
-    gap: 45px;
+    gap: clamp(20px, 5vw, 45px);
 }
 .nav-login-cart button{
-    width: 157px;
-    height: 58px;
+    width: clamp(80px, 15vw, 157px);
+    height: clamp(35px, 6vw, 58px);
     outline: none;
     border: 1px solid #7a7a7a;
     border-radius: 75px;
     color: #515151;
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
     font-weight: 500;
     cursor: pointer;
-
 }
 .nav-login-button:active{
 background: rgb(223, 223, 223);
 }
 .nav-login-cart img{
-    width: 40px;
+    width: clamp(25px, 4vw, 40px);
     cursor: pointer;
-
 }
 .nav-cart-count{
-width: 22px;
-height: 22px;
+width: clamp(18px, 2.5vw, 22px);
+height: clamp(18px, 2.5vw, 22px);
 display: flex;
 justify-content:center;
 align-items: center;
-margin-top: -35px;
-margin-left: -55px;
+margin-top: clamp(-25px, -5vw, -35px);
+margin-left: clamp(-25px, -6vw, -55px);
  border-radius: 11px;
- font-size: 14px;
+ font-size: clamp(13px, 1.5vw, 14px);
  background: red;
  color: white;
 }
 
 .downwards{
-    width: 41px;
-    height: 41px;
-    padding :3px 5px;
+    width: clamp(30px, 5vw, 41px);
+    height: clamp(30px, 5vw, 41px);
+    padding: clamp(2px, 0.5vw, 3px) clamp(3px, 0.8vw, 5px);
     background: rgb(240, 127, 62);
     border-radius: 50%;
-    margin-top: -50px;
-    margin-left: -5px;
+    margin-top: clamp(-35px, -6vw, -50px);
+    margin-left: clamp(-3px, -1vw, -5px);
     position: fixed;
     left:0;
     cursor: pointer;
@@ -102,76 +102,58 @@ margin-left: -55px;
 .displayblock{
     display: block;
 }
+
 @media (max-width:750px){
-  .downwards{
+    .downwards{
         display: block;
     }
-.navbar{
-    justify-content: space-between;
-    padding: 5px;
-    box-shadow: 0 1px 3px -2px black;
-    transition:0.5s;
-}
-.navbar-logo{
-    gap: 6px;
-}
-
-.navbar-logo img{
-    width: 35px;
-}
-
-.navbar-logo p{
-    font-size: 22px;
-}
-
-.nav-menu{
-    display: none;
-    align-items: center;
-    justify-content: space-;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 30px 0;
-    color:rgb(98, 98, 98);
-    background: rgb(252, 218, 218);
-    gap: 50px;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-.nav-menu hr{
-    border: none;
-    width: 80%;
-    height: 3px;
-    border-radius: 10px;
-    background: rgb(255, 153, 57);
-}
-.nav-login-cart{
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-.nav-login-cart button{
-    width: 80px;
-    height: 35px;
-    border-radius: 65px;
-    font-size: 16px;
-
-}
-.nav-login-cart img{
-    cursor: pointer;
-
-}
-.nav-cart-count{
-width: 18px;
-height: 18px;
-margin-top: -35px;
-margin-left: -25px;
- border-radius: 11px;
- font-size: 13px;
- background: red;
- color: white;
-}
-
+    .navbar{
+        justify-content: space-between;
+        padding: clamp(3px, 1vw, 5px);
+    }
+    .navbar-logo{
+        gap: clamp(4px, 1.5vw, 6px);
+    }
+    .navbar-logo img{
+        width: clamp(25px, 6vw, 35px);
+    }
+    .navbar-logo p{
+        font-size: clamp(18px, 4vw, 22px);
+    }
+    .nav-menu{
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        padding: clamp(20px, 8vw, 30px) 0;
+        background: rgb(252, 218, 218);
+        gap: clamp(30px, 5vw, 50px);
+        font-size: clamp(16px, 3vw, 20px);
+    }
+    .nav-menu.active {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-menu hr{
+        background: rgb(255, 153, 57);
+    }
+    .nav-login-cart{
+        gap: clamp(8px, 2vw, 10px);
+    }
+    .nav-login-cart button{
+        width: clamp(60px, 12vw, 80px);
+        height: clamp(25px, 5vw, 35px);
+        font-size: clamp(14px, 2vw, 16px);
+    }
+    .nav-login-cart img{
+        width: clamp(20px, 3vw, 25px);
+    }
+    .nav-cart-count{
+        width: clamp(15px, 2vw, 18px);
+        height: clamp(15px, 2vw, 18px);
+        margin-top: clamp(-25px, -4vw, -35px);
+        margin-left: clamp(-18px, -3vw, -25px);
+        font-size: clamp(11px, 1.5vw, 13px);
+    }
 }

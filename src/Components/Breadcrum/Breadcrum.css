@@ -1,10 +1,27 @@
 .breadcrum{
     display: flex;
     align-items: center;
-    gap: 8px;
-    margin:5px 0px;
+    gap: clamp(6px, 1vw, 8px);
+    margin: clamp(3px, 1vw, 5px) 0px;
     color: #5e5e5e;
-    font-size:16px;
-    font-weight: 60px 170px;
-    text-transform:capitalize ;
+    font-size: clamp(14px, 2vw, 16px);
+    font-weight: 600;
+    text-transform: capitalize;
+    padding: 0 clamp(10px, 15vw, 170px);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .breadcrum {
+        flex-wrap: wrap;
+        gap: clamp(4px, 0.8vw, 6px);
+        padding: 0 clamp(5px, 3vw, 20px);
+    }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+    .breadcrum {
+        font-size: clamp(12px, 1.5vw, 14px);
+    }
 }
