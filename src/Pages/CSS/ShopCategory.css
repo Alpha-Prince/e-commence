@@ -25,6 +25,7 @@
     margin-bottom: clamp(15px, 3vw, 20px);
 }
 
+
 .banner-left p span {
     font-weight: 600;
     color: #ff4141;
@@ -130,6 +131,12 @@
     .banner-right img {
         width: clamp(120px, 30vw, 180px);
     }
+.cartitems-down{
+    display: flex;
+        flex-direction: column;
+    margin: clamp(50px, 10vw, 100px) 0;
+    gap: clamp(30px, 6vw, 50px);
+}
 }
 
 /* Small Mobile Styles */
